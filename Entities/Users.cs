@@ -8,7 +8,8 @@ namespace Entities
 {
     public class Users
     {
+        public int UsersId { get; set; }
         public string KullaniciAdi { get; set; }
-        public int Sifre { get; set; }
+        public string Sifre { get; set; }
     }
 }
