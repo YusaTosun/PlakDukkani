@@ -49,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnEnYeni10 = new System.Windows.Forms.Button();
             this.btnIndirimliAlbum = new System.Windows.Forms.Button();
+            this.btnTumunuGoster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlakListe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,6 +202,7 @@
             // 
             // dgvPlakListe
             // 
+            this.dgvPlakListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlakListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlakListe.Location = new System.Drawing.Point(348, 16);
             this.dgvPlakListe.Margin = new System.Windows.Forms.Padding(2);
@@ -269,11 +271,24 @@
             this.btnIndirimliAlbum.Text = "İndirimli Albümler";
             this.btnIndirimliAlbum.UseVisualStyleBackColor = true;
             // 
+            // btnTumunuGoster
+            // 
+            this.btnTumunuGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTumunuGoster.Location = new System.Drawing.Point(944, 239);
+            this.btnTumunuGoster.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTumunuGoster.Name = "btnTumunuGoster";
+            this.btnTumunuGoster.Size = new System.Drawing.Size(163, 34);
+            this.btnTumunuGoster.TabIndex = 7;
+            this.btnTumunuGoster.Tag = "5";
+            this.btnTumunuGoster.Text = "Tumunu Goster";
+            this.btnTumunuGoster.UseVisualStyleBackColor = true;
+            // 
             // AlbumSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 480);
+            this.Controls.Add(this.btnTumunuGoster);
             this.Controls.Add(this.btnIndirimliAlbum);
             this.Controls.Add(this.btnEnYeni10);
             this.Controls.Add(this.label7);
@@ -328,5 +343,6 @@
         private Label label7;
         private Button btnEnYeni10;
         private Button btnIndirimliAlbum;
+        private Button btnTumunuGoster;
     }
 }
