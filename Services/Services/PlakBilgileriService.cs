@@ -75,5 +75,6 @@ namespace BLL.Services
                 return tumunuGoster;
             }
         }
+        public void KayitEkle(string Ad,string Sanatci,DateTime tarih,double fiyat,double oran,bool durum)
     }
 }

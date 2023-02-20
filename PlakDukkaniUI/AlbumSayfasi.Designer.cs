@@ -36,10 +36,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtAlbumAdi = new System.Windows.Forms.TextBox();
             this.txtAlbumSanatciGrubu = new System.Windows.Forms.TextBox();
-            this.txtAlbumCikisTarihi = new System.Windows.Forms.TextBox();
             this.txtAlbumFiyati = new System.Windows.Forms.TextBox();
             this.txtIndirimOrani = new System.Windows.Forms.TextBox();
-            this.txtSatisDurumu = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
@@ -50,6 +48,8 @@
             this.btnEnYeni10 = new System.Windows.Forms.Button();
             this.btnIndirimliAlbum = new System.Windows.Forms.Button();
             this.btnTumunuGoster = new System.Windows.Forms.Button();
+            this.chkSatisDurumu = new System.Windows.Forms.CheckBox();
+            this.dtpCikisTarih = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlakListe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,14 +135,6 @@
             this.txtAlbumSanatciGrubu.Size = new System.Drawing.Size(106, 23);
             this.txtAlbumSanatciGrubu.TabIndex = 1;
             // 
-            // txtAlbumCikisTarihi
-            // 
-            this.txtAlbumCikisTarihi.Location = new System.Drawing.Point(211, 81);
-            this.txtAlbumCikisTarihi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAlbumCikisTarihi.Name = "txtAlbumCikisTarihi";
-            this.txtAlbumCikisTarihi.Size = new System.Drawing.Size(106, 23);
-            this.txtAlbumCikisTarihi.TabIndex = 1;
-            // 
             // txtAlbumFiyati
             // 
             this.txtAlbumFiyati.Location = new System.Drawing.Point(211, 121);
@@ -158,14 +150,6 @@
             this.txtIndirimOrani.Name = "txtIndirimOrani";
             this.txtIndirimOrani.Size = new System.Drawing.Size(106, 23);
             this.txtIndirimOrani.TabIndex = 1;
-            // 
-            // txtSatisDurumu
-            // 
-            this.txtSatisDurumu.Location = new System.Drawing.Point(211, 193);
-            this.txtSatisDurumu.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSatisDurumu.Name = "txtSatisDurumu";
-            this.txtSatisDurumu.Size = new System.Drawing.Size(106, 23);
-            this.txtSatisDurumu.TabIndex = 1;
             // 
             // btnEkle
             // 
@@ -283,11 +267,30 @@
             this.btnTumunuGoster.Text = "Tumunu Goster";
             this.btnTumunuGoster.UseVisualStyleBackColor = true;
             // 
+            // chkSatisDurumu
+            // 
+            this.chkSatisDurumu.AutoSize = true;
+            this.chkSatisDurumu.Location = new System.Drawing.Point(211, 197);
+            this.chkSatisDurumu.Name = "chkSatisDurumu";
+            this.chkSatisDurumu.Size = new System.Drawing.Size(97, 19);
+            this.chkSatisDurumu.TabIndex = 8;
+            this.chkSatisDurumu.Text = "Satis Durumu";
+            this.chkSatisDurumu.UseVisualStyleBackColor = true;
+            // 
+            // dtpCikisTarih
+            // 
+            this.dtpCikisTarih.Location = new System.Drawing.Point(205, 79);
+            this.dtpCikisTarih.Name = "dtpCikisTarih";
+            this.dtpCikisTarih.Size = new System.Drawing.Size(116, 23);
+            this.dtpCikisTarih.TabIndex = 9;
+            // 
             // AlbumSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 480);
+            this.Controls.Add(this.dtpCikisTarih);
+            this.Controls.Add(this.chkSatisDurumu);
             this.Controls.Add(this.btnTumunuGoster);
             this.Controls.Add(this.btnIndirimliAlbum);
             this.Controls.Add(this.btnEnYeni10);
@@ -298,10 +301,8 @@
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.txtSatisDurumu);
             this.Controls.Add(this.txtIndirimOrani);
             this.Controls.Add(this.txtAlbumFiyati);
-            this.Controls.Add(this.txtAlbumCikisTarihi);
             this.Controls.Add(this.txtAlbumSanatciGrubu);
             this.Controls.Add(this.txtAlbumAdi);
             this.Controls.Add(this.label6);
@@ -330,10 +331,8 @@
         private Label label6;
         private TextBox txtAlbumAdi;
         private TextBox txtAlbumSanatciGrubu;
-        private TextBox txtAlbumCikisTarihi;
         private TextBox txtAlbumFiyati;
         private TextBox txtIndirimOrani;
-        private TextBox txtSatisDurumu;
         private Button btnEkle;
         private Button btnGuncelle;
         private Button btnSil;
@@ -344,5 +343,7 @@
         private Button btnEnYeni10;
         private Button btnIndirimliAlbum;
         private Button btnTumunuGoster;
+        private CheckBox chkSatisDurumu;
+        private DateTimePicker dtpCikisTarih;
     }
 }
