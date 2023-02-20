@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    internal class BaseEntity
+    public class BaseEntity
     {
+        public string AlbumAdi { get; set; }
+        public string AlbumSanatcisiGrubu { get; set; }
+        public DateTime AlbumCikisTarihi { get; set; }
+        public double AlbumFiyati { get; set; }
+        public double? IndirimOrani { get; set; }
+        public bool SatisDurum { get; set; }
+
     }
 }

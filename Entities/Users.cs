@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    internal class Users
+    public class Users
     {
+        public string KullaniciAdi { get; set; }
+        public int Sifre { get; set; }
     }
 }
