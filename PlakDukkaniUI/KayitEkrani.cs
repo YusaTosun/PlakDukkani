@@ -104,7 +104,11 @@ namespace PlakDukkaniUI
 
 
         }
-
+        /// <summary>
+        /// Kullanıcı adının uygunluğunu olmadığını kontrol
+        /// </summary>
+        /// <param name="KullaniciAdi"></param>
+        /// <returns>Kullanıcı adı uygunsa True,değilse False değeri döndürür</returns>
         private bool KullanıcıAdıKontrol(string KullaniciAdi)
         {
             using (_db=new())
