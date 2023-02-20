@@ -8,6 +8,7 @@ namespace Entities
 {
     public class BaseEntity
     {
+        public int Id { get; set; }
         public string AlbumAdi { get; set; }
         public string AlbumSanatcisiGrubu { get; set; }
         public DateTime AlbumCikisTarihi { get; set; }
