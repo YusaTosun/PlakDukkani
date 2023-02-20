@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.txtSifreOnay = new System.Windows.Forms.TextBox();
             this.btnKayitOl = new System.Windows.Forms.Button();
             this.btnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -68,26 +68,26 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Şifre Onay : ";
             // 
-            // textBox1
+            // txtKullaniciAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(219, 41);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(225, 31);
+            this.txtKullaniciAdi.TabIndex = 2;
             // 
-            // textBox2
+            // txtSifre
             // 
-            this.textBox2.Location = new System.Drawing.Point(219, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 31);
-            this.textBox2.TabIndex = 2;
+            this.txtSifre.Location = new System.Drawing.Point(219, 94);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(225, 31);
+            this.txtSifre.TabIndex = 2;
             // 
-            // textBox3
+            // txtSifreOnay
             // 
-            this.textBox3.Location = new System.Drawing.Point(219, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 31);
-            this.textBox3.TabIndex = 2;
+            this.txtSifreOnay.Location = new System.Drawing.Point(219, 140);
+            this.txtSifreOnay.Name = "txtSifreOnay";
+            this.txtSifreOnay.Size = new System.Drawing.Size(225, 31);
+            this.txtSifreOnay.TabIndex = 2;
             // 
             // btnKayitOl
             // 
@@ -98,6 +98,7 @@
             this.btnKayitOl.TabIndex = 3;
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // btnGeri
             // 
@@ -117,9 +118,9 @@
             this.ClientSize = new System.Drawing.Size(582, 346);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.btnKayitOl);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSifreOnay);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -136,9 +137,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtKullaniciAdi;
+        private TextBox txtSifre;
+        private TextBox txtSifreOnay;
         private Button btnKayitOl;
         private Button btnGeri;
     }
