@@ -13,5 +13,29 @@ namespace PlakDukkaniUI
             kayit.Show();
             this.Hide();
         }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            SifreKarakterKontrol(txtSifre.Text);
+        }
+
+        private void SifreKarakterKontrol(string sifre)
+        {
+
+            int BuyukHarfSayisi = 0;
+            int KucukHarfSayisi = 0;
+            string Karakterler = "!:+*";
+
+            foreach (char item in sifre)
+            {
+                if (Karakterler.Contains(item))
+                {
+                    Karakterler+=1;
+                }
+            }
+
+            MessageBox.Show(Karakterler.ToString());
+            
+        }
     }
 }
