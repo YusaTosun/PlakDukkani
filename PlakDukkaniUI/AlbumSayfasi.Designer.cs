@@ -41,8 +41,8 @@
             this.txtIndirimOrani = new System.Windows.Forms.TextBox();
             this.txtSatisDurumu = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSatisDurmus = new System.Windows.Forms.Button();
             this.btnSatisDevamEden = new System.Windows.Forms.Button();
@@ -164,25 +164,25 @@
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnGuncelle
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(181, 404);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 46);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGuncelle.Location = new System.Drawing.Point(181, 404);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(136, 46);
+            this.btnGuncelle.TabIndex = 2;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSil
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(323, 404);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSil.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSil.Location = new System.Drawing.Point(323, 404);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(136, 46);
+            this.btnSil.TabIndex = 2;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -255,8 +255,8 @@
             this.Controls.Add(this.btnSatisDevamEden);
             this.Controls.Add(this.btnSatisDurmus);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtSatisDurumu);
             this.Controls.Add(this.txtIndirimOrani);
@@ -294,8 +294,8 @@
         private TextBox txtIndirimOrani;
         private TextBox txtSatisDurumu;
         private Button btnEkle;
-        private Button button2;
-        private Button button3;
+        private Button btnGuncelle;
+        private Button btnSil;
         private DataGridView dataGridView1;
         private Button btnSatisDurmus;
         private Button btnSatisDevamEden;
