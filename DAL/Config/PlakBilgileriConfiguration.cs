@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Config
 {
-    public class UsersConfiguration : IEntityTypeConfiguration<Users>
+    public class PlakBilgileriConfiguration : IEntityTypeConfiguration<PlakBilgileri>
     {
-        public void Configure(EntityTypeBuilder<Users> builder)
+        public void Configure(EntityTypeBuilder<PlakBilgileri> builder)
         {
-           
+            builder.HasKey(x => x.Id);
         }
     }
 }
