@@ -44,6 +44,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSatisDurmus = new System.Windows.Forms.Button();
+            this.btnSatisDevamEden = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnEnYeni10 = new System.Windows.Forms.Button();
+            this.btnIndirimliAlbum = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,11 +194,66 @@
             this.dataGridView1.Size = new System.Drawing.Size(818, 743);
             this.dataGridView1.TabIndex = 3;
             // 
+            // btnSatisDurmus
+            // 
+            this.btnSatisDurmus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSatisDurmus.Location = new System.Drawing.Point(1348, 121);
+            this.btnSatisDurmus.Name = "btnSatisDurmus";
+            this.btnSatisDurmus.Size = new System.Drawing.Size(233, 34);
+            this.btnSatisDurmus.TabIndex = 4;
+            this.btnSatisDurmus.Text = "Satışı Durmuş";
+            this.btnSatisDurmus.UseVisualStyleBackColor = true;
+            // 
+            // btnSatisDevamEden
+            // 
+            this.btnSatisDevamEden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSatisDevamEden.Location = new System.Drawing.Point(1348, 174);
+            this.btnSatisDevamEden.Name = "btnSatisDevamEden";
+            this.btnSatisDevamEden.Size = new System.Drawing.Size(233, 34);
+            this.btnSatisDevamEden.TabIndex = 4;
+            this.btnSatisDevamEden.Text = "Satışı Devam Eden";
+            this.btnSatisDevamEden.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(1357, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(214, 38);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Albüm Listeleri ";
+            // 
+            // btnEnYeni10
+            // 
+            this.btnEnYeni10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEnYeni10.Location = new System.Drawing.Point(1348, 228);
+            this.btnEnYeni10.Name = "btnEnYeni10";
+            this.btnEnYeni10.Size = new System.Drawing.Size(233, 34);
+            this.btnEnYeni10.TabIndex = 6;
+            this.btnEnYeni10.Text = "En Yeni 10";
+            this.btnEnYeni10.UseVisualStyleBackColor = true;
+            // 
+            // btnIndirimliAlbum
+            // 
+            this.btnIndirimliAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIndirimliAlbum.Location = new System.Drawing.Point(1348, 281);
+            this.btnIndirimliAlbum.Name = "btnIndirimliAlbum";
+            this.btnIndirimliAlbum.Size = new System.Drawing.Size(233, 35);
+            this.btnIndirimliAlbum.TabIndex = 7;
+            this.btnIndirimliAlbum.Text = "İndirimli Albümler";
+            this.btnIndirimliAlbum.UseVisualStyleBackColor = true;
+            // 
             // AlbumSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 800);
+            this.ClientSize = new System.Drawing.Size(1593, 800);
+            this.Controls.Add(this.btnIndirimliAlbum);
+            this.Controls.Add(this.btnEnYeni10);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnSatisDevamEden);
+            this.Controls.Add(this.btnSatisDurmus);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -237,5 +297,10 @@
         private Button button2;
         private Button button3;
         private DataGridView dataGridView1;
+        private Button btnSatisDurmus;
+        private Button btnSatisDevamEden;
+        private Label label7;
+        private Button btnEnYeni10;
+        private Button btnIndirimliAlbum;
     }
 }
