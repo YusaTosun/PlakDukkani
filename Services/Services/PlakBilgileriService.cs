@@ -6,10 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.Services
-{
-    PlakDukkaniContext _db;
+{ 
     public class PlakBilgileriService
     {
-        
+        PlakDukkaniContext _db;
+        public dynamic SatisiDurmusAlbumler()
+        {
+            using(_db= new PlakDukkaniContext())
+            {
+                _db.
+            }
+        }
     }
 }
