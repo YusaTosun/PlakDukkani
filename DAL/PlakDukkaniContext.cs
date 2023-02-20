@@ -11,8 +11,8 @@ namespace DAL
 {
     public class PlakDukkaniContext:DbContext
     {
-        DbSet<User>User { get; set; }
-        DbSet<PlakBilgileri> PlakBilgileri { get; set; }
+        public DbSet<User>User { get; set; }
+        public DbSet<PlakBilgileri> PlakBilgileri { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-Q56AEMU\MSSQLKD14;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
