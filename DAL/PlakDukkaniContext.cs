@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DAL.Config;
+using Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,18 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class PlakDukkaniContext
+    public class PlakDukkaniContext:DbContext
     {
+        DbSet<User>User { get; set; }
+        DbSet<PlakBilgileri> PlakBilgileri { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-Q56AEMU\MSSQLKD14;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
+            base.OnConfiguring(optionsBuilder);
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserConfiguration()).ApplyConfiguration(new PlakBilgileriConfiguration());
+        }
     }
 }
