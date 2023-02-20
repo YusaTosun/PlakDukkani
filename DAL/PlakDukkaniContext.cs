@@ -11,8 +11,8 @@ namespace DAL
 {
     public class PlakDukkaniContext:DbContext
     {
-        DbSet<User>User { get; set; }
-        DbSet<PlakBilgileri> PlakBilgileri { get; set; }
+       public DbSet<User>User { get; set; }
+        public DbSet<PlakBilgileri> PlakBilgileri { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //BESTE 
@@ -22,7 +22,7 @@ namespace DAL
 
             //YUŞA
 
-            optionsBuilder.UseSqlServer(@"Data Source=YUSATOSUN\SQLEXPRESS;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
+            optionsBuilder.UseSqlServer(@"Data Source=YUSATOSUN\SQLEXPRESS;Initial Catalog=PlakDukkaniDb;Trusted_Connection=True;");
             base.OnConfiguring(optionsBuilder);
             //doğukan
 
