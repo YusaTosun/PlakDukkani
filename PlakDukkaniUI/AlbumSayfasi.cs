@@ -64,12 +64,12 @@ namespace PlakDukkaniUI
 
         private void KayitSilme()
         {
-            throw new NotImplementedException();
+           
         }
 
         private void KayitGuncelle()
         {
-            throw new NotImplementedException();
+           
         }
 
         private void KayitEkle()
