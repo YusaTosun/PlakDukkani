@@ -1,7 +1,10 @@
+using DAL;
+
 namespace PlakDukkaniUI
 {
     public partial class Form1 : Form
     {
+        PlakDukkaniContext _db;
         public Form1()
         {
             InitializeComponent();
@@ -16,26 +19,50 @@ namespace PlakDukkaniUI
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            SifreKarakterKontrol(txtSifre.Text);
-        }
-
-        private void SifreKarakterKontrol(string sifre)
-        {
-
-            int BuyukHarfSayisi = 0;
-            int KucukHarfSayisi = 0;
-            string Karakterler = "!:+*";
-
-            foreach (char item in sifre)
+            if (SifreKontrol(txtSifre.Text) && KullaniciAdiKontrol(txtKullaniciAdi.Text))
             {
-                if (Karakterler.Contains(item))
-                {
-                    Karakterler+=1; // burda kaldým
-                }
+                AlbumSayfasi albumSayfasi = new AlbumSayfasi();
+                albumSayfasi.Show();
+                this.Hide();
             }
 
-            MessageBox.Show(Karakterler.ToString());
-            
+        }
+        
+        /// <summary>
+        /// Kullanýcý adýný kontrol eden method
+        /// </summary>
+        /// <returns>Kullanýcý adý mevcutsa Tru,deðilse False döner</returns>
+        private bool KullaniciAdiKontrol(string _KullaniciAdi)
+        {
+            using (_db=new())
+            {
+                if (_db.User.Any(x => x.KullaniciAdi.Contains(_KullaniciAdi)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           
+
+
+        }
+        private bool SifreKontrol(string sifre)
+        {
+            using (_db=new())
+            {
+                if (_db.User.Any(x => x.Sifre.Contains(sifre)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           
         }
     }
 }
