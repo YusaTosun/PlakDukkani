@@ -6,5 +6,12 @@ namespace PlakDukkaniUI
         {
             InitializeComponent();
         }
+
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+            KayitEkrani kayit = new();
+            kayit.Show();
+            this.Hide();
+        }
     }
 }

@@ -16,5 +16,17 @@ namespace PlakDukkaniUI
         {
             InitializeComponent();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Close();
+        }
+
+        private void KayitEkrani_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
