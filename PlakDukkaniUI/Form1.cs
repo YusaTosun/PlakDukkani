@@ -19,66 +19,50 @@ namespace PlakDukkaniUI
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (SifreKontrol(txtSifre.Text) && KullaniciAdiKontrol(txtKullaniciAdi.Text))
             {
-
+                AlbumSayfasi albumSayfasi = new AlbumSayfasi();
+                albumSayfasi.Show();
+                this.Hide();
             }
-            SifreKarakterKontrol(txtSifre.Text);
+
         }
+        
         /// <summary>
-        /// þifrenin uygunluðunu kontrol eden method
+        /// Kullanýcý adýný kontrol eden method
         /// </summary>
-        /// <param name="sifre"></param>
-        /// <returns>Þifre uygunsa True,deðilse false döner</returns>
-        private bool SifreKarakterKontrol(string sifre)
-        {
-
-            int BuyukHarfSayisi = 0;
-            int kucukHarfSayisi = 0;
-            string Karakterler = "!:+*";
-            int karakterSayisi = 0;
-
-            foreach (char item in sifre)
-            {
-                if (Karakterler.Contains(item))
-                {
-                    karakterSayisi += 1; // burda kaldým
-                }
-
-                else if (char.IsLetter(item))
-                {
-
-                    if (!char.IsLower(item))
-                    {
-                        BuyukHarfSayisi++;
-                    }
-                    else
-                    {
-                        kucukHarfSayisi++;
-                    }
-                }
-
-            }
-
-
-            if (sifre.Length >= 8 && BuyukHarfSayisi >= 2 && kucukHarfSayisi>=3 && karakterSayisi>=2)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-           
-
-        }
-        private void KullaniciAdiKontrol()
+        /// <returns>Kullanýcý adý mevcutsa Tru,deðilse False döner</returns>
+        private bool KullaniciAdiKontrol(string _KullaniciAdi)
         {
             using (_db=new())
             {
-                
+                if (_db.User.Any(x => x.KullaniciAdi.Contains(_KullaniciAdi)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
+           
+
+
+        }
+        private bool SifreKontrol(string sifre)
+        {
+            using (_db=new())
+            {
+                if (_db.User.Any(x => x.Sifre.Contains(sifre)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           
         }
     }
 }
