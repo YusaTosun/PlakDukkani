@@ -14,7 +14,7 @@ namespace BLL.Services
         {
             using(_db= new PlakDukkaniContext())
             {
-                _db.
+               
             }
         }
     }
