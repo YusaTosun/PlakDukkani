@@ -1,7 +1,10 @@
+using DAL;
+
 namespace PlakDukkaniUI
 {
     public partial class Form1 : Form
     {
+        PlakDukkaniContext _db;
         public Form1()
         {
             InitializeComponent();
@@ -16,26 +19,66 @@ namespace PlakDukkaniUI
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
+            if (true)
+            {
+
+            }
             SifreKarakterKontrol(txtSifre.Text);
         }
-
-        private void SifreKarakterKontrol(string sifre)
+        /// <summary>
+        /// þifrenin uygunluðunu kontrol eden method
+        /// </summary>
+        /// <param name="sifre"></param>
+        /// <returns>Þifre uygunsa True,deðilse false döner</returns>
+        private bool SifreKarakterKontrol(string sifre)
         {
 
             int BuyukHarfSayisi = 0;
-            int KucukHarfSayisi = 0;
+            int kucukHarfSayisi = 0;
             string Karakterler = "!:+*";
+            int karakterSayisi = 0;
 
             foreach (char item in sifre)
             {
                 if (Karakterler.Contains(item))
                 {
-                    Karakterler+=1; // burda kaldým
+                    karakterSayisi += 1; // burda kaldým
                 }
+
+                else if (char.IsLetter(item))
+                {
+
+                    if (!char.IsLower(item))
+                    {
+                        BuyukHarfSayisi++;
+                    }
+                    else
+                    {
+                        kucukHarfSayisi++;
+                    }
+                }
+
             }
 
-            MessageBox.Show(Karakterler.ToString());
-            
+
+            if (sifre.Length >= 8 && BuyukHarfSayisi >= 2 && kucukHarfSayisi>=3 && karakterSayisi>=2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+           
+
+        }
+        private void KullaniciAdiKontrol()
+        {
+            using (_db=new())
+            {
+                
+            }
         }
     }
 }
