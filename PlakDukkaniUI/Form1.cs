@@ -49,6 +49,11 @@ namespace PlakDukkaniUI
 
 
         }
+        /// <summary>
+        /// Kullanýcý adýnýn daha önce var olup olmadýðýný kontrol
+        /// </summary>
+        /// <param name="sifre"></param>
+        /// <returns>kullanýcý adý database yoksa True,varsa False</returns>
         private bool SifreKontrol(string sifre)
         {
             using (_db=new())
