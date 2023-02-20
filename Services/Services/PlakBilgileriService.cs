@@ -11,6 +11,7 @@ namespace BLL.Services
     public class PlakBilgileriService
     {
         PlakDukkaniContext _db=new PlakDukkaniContext();
+        PlakBilgileri _bilgi=new PlakBilgileri();
         public dynamic SatisiDurmusAlbumler()
         {
             using(_db= new PlakDukkaniContext())
@@ -76,5 +77,14 @@ namespace BLL.Services
             }
         }
         public void KayitEkle(string Ad,string Sanatci,DateTime tarih,double fiyat,double oran,bool durum)
+        {
+            _bilgi.AlbumAdi = Ad;
+            _bilgi.AlbumSanatcisiGrubu= Sanatci;
+            _bilgi.AlbumCikisTarihi= tarih;
+            _bilgi.AlbumFiyati=fiyat;
+            _bilgi.IndirimOrani = oran;
+            _bilgi.SatisDurum= durum;
+            _db.PlakBilgileri.Add(_bilgi);
+        }
     }
 }
