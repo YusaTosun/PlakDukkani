@@ -15,6 +15,7 @@ namespace BLL.Services
         {
             using(_db= new PlakDukkaniContext())
             {
+
                var satisiDurmusAlbum = _db.PlakBilgileri.Where(x => x.SatisDurum == false).Select(x => new
                 {
                     AlbumAdi = x.AlbumAdi,
@@ -53,6 +54,7 @@ namespace BLL.Services
             using (_db = new PlakDukkaniContext())
             {
                 _db.PlakBilgileri.
+
             }
         }
     }

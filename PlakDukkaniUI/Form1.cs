@@ -30,7 +30,7 @@ namespace PlakDukkaniUI
             {
                 if (Karakterler.Contains(item))
                 {
-                    Karakterler+=1;
+                    Karakterler+=1; // burda kaldým
                 }
             }
 
