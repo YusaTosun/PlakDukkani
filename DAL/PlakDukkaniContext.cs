@@ -19,13 +19,15 @@ namespace DAL
         {
             //BESTE 
 
-            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-Q56AEMU\MSSQLKD14;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
-            //base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-Q56AEMU\MSSQLKD14;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
+            base.OnConfiguring(optionsBuilder);
 
             //YUŞA
 
-            optionsBuilder.UseSqlServer(@"Data Source=YUSATOSUN\SQLEXPRESS;Initial Catalog=PlakDukkaniDb;Trusted_Connection=True;");
-            base.OnConfiguring(optionsBuilder);
+
+            //optionsBuilder.UseSqlServer(@"Data Source=YUSATOSUN\SQLEXPRESS;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");
+            //base.OnConfiguring(optionsBuilder);
+
             //doğukan
 
             //optionsBuilder.UseSqlServer(@"Data Source=YUSATOSUN\SQLEXPRESS;Initial Catalog=PlakDukkaniDb;user Id=sa;Password=Beste1998.");

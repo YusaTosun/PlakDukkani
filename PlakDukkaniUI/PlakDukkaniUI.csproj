@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj" />
+
+    <ProjectReference Include="..\Services\BLL.csproj" />
+
   </ItemGroup>
 
 </Project>
